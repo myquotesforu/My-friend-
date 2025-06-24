@@ -2,110 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Nuzhat Ke Naam</title>
+  <title>Designer Good Morning Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #3e5151, #decba4);
+      font-family: 'Poppins', sans-serif;
       overflow: hidden;
-      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr2mpI-HAtF0GwbXiDno4fC86MpKskg-rzTXIH9woq928mVBfKlX9VuJE&s=10') no-repeat center center fixed;
-      background-size: cover;
+      height: 100vh;
+      position: relative;
       color: white;
-      text-align: center;
     }
 
-    .container {
+    /* Rain animation */
+    .rain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.ibb.co/tQjq0Wc/rain.gif') repeat;
+      opacity: 0.25;
+      z-index: 1;
+    }
+
+    .card {
       position: relative;
       z-index: 2;
-      top: 20vh;
+      max-width: 450px;
+      margin: 80px auto;
+      background: rgba(0, 0, 0, 0.55);
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      padding: 35px;
+      text-align: center;
+      animation: float 6s ease-in-out infinite;
+      backdrop-filter: blur(6px);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
     h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-      color: #ffd1dc;
+      font-family: 'Kaushan Script', cursive;
+      font-size: 38px;
+      margin-bottom: 15px;
+      color: #ffdfdf;
     }
 
     .shayari {
-      font-size: 1.5em;
-      margin: 20px;
-      padding: 10px;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 15px;
-      display: inline-block;
-      animation: fadeIn 3s ease-in-out;
+      font-size: 18px;
+      line-height: 1.8;
+      font-style: italic;
+      margin: 20px 0;
     }
 
-    .btn {
-      padding: 15px 30px;
-      font-size: 1.2em;
-      margin-top: 30px;
-      background: #ff69b4;
-      border: none;
-      border-radius: 10px;
+    .btn, .whatsapp-btn {
+      background-color: #ff6f91;
       color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      margin: 8px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
     }
 
     .btn:hover {
-      background: #ff1493;
+      background-color: #ff3f6c;
+      transform: scale(1.05);
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(-20px);}
-      100% { opacity: 1; transform: translateY(0);}
+    .whatsapp-btn {
+      background-color: #25D366;
     }
 
-    /* Phool girna (Flower Rain) */
-    .flower {
-      position: absolute;
-      top: -50px;
-      font-size: 2em;
-      animation: fall 10s linear infinite;
-      color: pink;
+    .whatsapp-btn:hover {
+      background-color: #1ca64f;
     }
 
-    @keyframes fall {
-      0% {
-        transform: translateY(0) rotate(0deg);
-      }
-      100% {
-        transform: translateY(100vh) rotate(360deg);
-      }
+    .icons {
+      font-size: 24px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>To My Pyari Dost, Nuzhat 🌸</h1>
+
+  <div class="rain"></div>
+
+  <div class="card">
+    <h1>Good Morning Dost 🌸</h1>
     <div class="shayari">
-      Tere jaise dost zindagi mein ho toh<br>
-      Har lamha mehka mehka sa lagta hai...<br>
-      Muskaan teri sabse khaas hai,<br>
-      Dosti mein tu ek pyaari aas hai... 💖
-    </div><br>
-    <button class="btn" onclick="showWish()">Ek Chhoti Si Wish ✨</button>
-    <p id="wish" style="margin-top:20px; font-size:1.3em; color: #fff;"></p>
+      बारिश की बूँदों में भीगती सुबह,<br>
+      चाय की चुस्की में तेरी याद... ☕<br>
+      दिल से निकली ये प्यारी दुआ,<br>
+      रहे हर सुबह तेरे लिए खास। 💖
+    </div>
+    
+    <div>
+      <button class="btn">🌅 Dil Se Good Morning</button>
+      <a href="https://wa.me/?text=Good%20Morning%20Dost!%20%F0%9F%8C%B8%0A%0A%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A4%BF%E0%A4%B6%20%E0%A4%95%E0%A5%80%20%E0%A4%AC%E0%A5%82%E0%A4%82%E0%A4%A6%E0%A5%8B%E0%A4%82%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%AD%E0%A5%80%E0%A4%97%E0%A4%A4%E0%A5%80%20%E0%A4%B8%E0%A5%81%E0%A4%AC%E0%A4%B9%2C%20%E0%A4%9A%E0%A4%BE%E0%A4%AF%20%E0%A4%95%E0%A5%80%20%E0%A4%9A%E0%A5%81%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A5%80%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%A4%E0%A5%87%E0%A4%B0%E0%A5%80%20%E0%A4%AF%E0%A4%BE%E0%A4%A6...%20%E2%98%95%F0%9F%92%96" 
+         class="whatsapp-btn" target="_blank">📲 Share on WhatsApp</a>
+    </div>
+
+    <div class="icons">❤️🌧️☕🌼</div>
   </div>
 
-  <!-- Flowers -->
-  <script>
-    function createFlower() {
-      const flower = document.createElement('div');
-      flower.classList.add('flower');
-      flower.innerText = '🌸';
-      flower.style.left = Math.random() * window.innerWidth + 'px';
-      flower.style.animationDuration = (5 + Math.random() * 5) + 's';
-      document.body.appendChild(flower);
-      setTimeout(() => flower.remove(), 10000);
-    }
-    setInterval(createFlower, 500);
-
-    function showWish() {
-      document.getElementById("wish").innerText = "Dua hai meri, khushiyo ka jahan ho tere saath,\nKabhi na ho tanha tu, har mod pe ho tere haath. 🌈";
-    }
-  </script>
 </body>
 </html>
