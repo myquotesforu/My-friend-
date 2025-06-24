@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nuzhat Ke Naam</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr2mpI-HAtF0GwbXiDno4fC86MpKskg-rzTXIH9woq928mVBfKlX9VuJE&s=10') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      top: 20vh;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #ffd1dc;
+    }
+
+    .shayari {
+      font-size: 1.5em;
+      margin: 20px;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      display: inline-block;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      margin-top: 30px;
+      background: #ff69b4;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #ff1493;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+
+    /* Phool girna (Flower Rain) */
+    .flower {
+      position: absolute;
+      top: -50px;
+      font-size: 2em;
+      animation: fall 10s linear infinite;
+      color: pink;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>To My Pyari Dost, Nuzhat 🌸</h1>
+    <div class="shayari">
+      Tere jaise dost zindagi mein ho toh<br>
+      Har lamha mehka mehka sa lagta hai...<br>
+      Muskaan teri sabse khaas hai,<br>
+      Dosti mein tu ek pyaari aas hai... 💖
+    </div><br>
+    <button class="btn" onclick="showWish()">Ek Chhoti Si Wish ✨</button>
+    <p id="wish" style="margin-top:20px; font-size:1.3em; color: #fff;"></p>
+  </div>
+
+  <!-- Flowers -->
+  <script>
+    function createFlower() {
+      const flower = document.createElement('div');
+      flower.classList.add('flower');
+      flower.innerText = '🌸';
+      flower.style.left = Math.random() * window.innerWidth + 'px';
+      flower.style.animationDuration = (5 + Math.random() * 5) + 's';
+      document.body.appendChild(flower);
+      setTimeout(() => flower.remove(), 10000);
+    }
+    setInterval(createFlower, 500);
+
+    function showWish() {
+      document.getElementById("wish").innerText = "Dua hai meri, khushiyo ka jahan ho tere saath,\nKabhi na ho tanha tu, har mod pe ho tere haath. 🌈";
+    }
+  </script>
+</body>
+</html>
